@@ -29,7 +29,7 @@ class ConcertOrdersController extends Controller
         ]);
 
         try {
-            $tickets = $concert->findTickets(request('ticket_quantity'));
+            $tickets = $concert->reservTickets(request('ticket_quantity'));
             $reservation = new Reservation($tickets);
 
             $this->paymentGateway->charge($reservation->totalCost(), request('payment_token'));
