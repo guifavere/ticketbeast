@@ -58,3 +58,9 @@ $factory->define(App\Ticket::class, function (Faker\Generator $faker) {
         },
     ];
 });
+
+$factory->state(App\Ticket::class, 'reserved', function () {
+    return [
+        'reserved_at' => Carbon::now(),
+    ];
+});
