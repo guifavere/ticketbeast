@@ -64,3 +64,10 @@ $factory->state(App\Ticket::class, 'reserved', function () {
         'reserved_at' => Carbon::now(),
     ];
 });
+
+$factory->define(App\Order::class, function (Faker\Generator $faker) {
+    return [
+        'amount' => 5250,
+        'email' => 'somebody@example.com',
+    ];
+});
