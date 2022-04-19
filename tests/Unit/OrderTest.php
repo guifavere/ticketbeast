@@ -1,10 +1,13 @@
 <?php
 
+namespace Tests\Unit;
+
 use App\Billing\Charge;
 use App\Order;
 use App\Ticket;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
+use Tests\TestCase;
 
 class OrderTest extends TestCase
 {
@@ -15,9 +18,9 @@ class OrderTest extends TestCase
     {
         $charge = new Charge(['amount' => 3600, 'card_last_four' => '1234']);
         $tickets = collect([
-            Mockery::spy(Ticket::class),
-            Mockery::spy(Ticket::class),
-            Mockery::spy(Ticket::class),
+            \Mockery::spy(Ticket::class),
+            \Mockery::spy(Ticket::class),
+            \Mockery::spy(Ticket::class),
         ]);
 
         $order = Order::forTickets($tickets, 'john@example.com', $charge);

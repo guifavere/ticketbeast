@@ -1,7 +1,10 @@
 <?php
 
+namespace Tests\Unit;
+
 use App\HashidsTicketCodeGenerator;
 use App\Ticket;
+use Tests\TestCase;
 
 class HashidsTicketCodeGeneratorTest extends TestCase
 {

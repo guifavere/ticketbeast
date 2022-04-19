@@ -1,7 +1,10 @@
 <?php
 
+namespace Tests\Unit\Mail;
+
 use App\Mail\OrderConfirmationEmail;
 use App\Order;
+use Tests\TestCase;
 
 class OrderConfirmationEmailTest extends TestCase
 {

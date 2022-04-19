@@ -1,6 +1,9 @@
 <?php
 
+namespace Tests\Unit\Billing;
+
 use App\Billing\FakePaymentGateway;
+use Tests\TestCase;
 
 class FakePaymentGatewayTest extends TestCase
 {

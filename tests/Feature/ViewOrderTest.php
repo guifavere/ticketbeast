@@ -1,9 +1,12 @@
 <?php
 
+namespace Tests\Feature;
+
 use App\Concert;
 use App\Order;
 use App\Ticket;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
+use Tests\TestCase;
 
 class ViewOrderTest extends TestCase
 {

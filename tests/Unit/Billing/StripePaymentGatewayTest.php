@@ -1,6 +1,9 @@
 <?php
 
+namespace Tests\Unit\Billing;
+
 use App\Billing\StripePaymentGateway;
+use Tests\TestCase;
 
 /**
  * @group integration
